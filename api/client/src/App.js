@@ -8,7 +8,7 @@ function App() {
 
   const fetchContacts = async () => {
     try {
-      const res = await axios.get("https://contact-backend2.onrender.com/api/contacts");
+      const res = await axios.get(`${process.env.PORT}/contacts`);
       setData(res.data);
     } catch (err) {
       console.log(err);
