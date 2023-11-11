@@ -1,5 +1,5 @@
 import './App.css';
-import react, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import axios from "axios";
 
 
@@ -8,7 +8,9 @@ function App() {
 
   const fetchContacts = async () => {
     try {
-      const res = await axios.get(`${process.env.PORT}/contacts`);
+      const res = await axios.get(
+        `https://contacts-api-apg9.onrender.com/api/contacts`
+      );
       setData(res.data);
     } catch (err) {
       console.log(err);

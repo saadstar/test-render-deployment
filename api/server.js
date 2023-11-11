@@ -15,11 +15,11 @@ app.use("/api/contacts",require("./router/contactRouter"))
 app.use("/api/users",router)
 app.use(erorrHandler);
 
-app.use(express.static(path.join(__dirname, "/client/build")));
+// app.use(express.static(path.join(__dirname, "/client/build")));
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname,"/client/build","index.html"))
-})
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname,"/client/build","index.html"))
+// })
 
 
 
